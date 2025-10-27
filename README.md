@@ -1,49 +1,41 @@
-# PKDiff-for-multimodal-Remote-Sensing-Segmentation
+```markdown
+# PKDiff-for-Multimodal-Remote-Sensing-Segmentation
 The code is currently being organized and supplemented.
 
+# Multimodal Remote Sensing Segmentation (DDP) Training
+Based on PyTorch DistributedDataParallel (DDP), this project provides scripts for multi-GPU training and evaluation, supporting single-machine multi-GPU and multi-machine multi-GPU setups, Linear Warmup → Cosine learning rate scheduling, parameter-grouped learning rates, distributed evaluation aggregation, and NVML GPU information printing.
 
-```markdown
-# 多模态遥感分割（DDP）训练
-
-基于 PyTorch DistributedDataParallel (DDP) 的多卡训练与评测脚本，支持单机多卡/多机多卡、Linear Warmup → Cosine 学习率调度、按参数名分组学习率、分布式评测聚合以及 NVML 显卡信息打印。
-```
+## Project Structure
 ```
 repo_root/
-├── train.py                       # 训练入口
+├── train.py                       # Training entry point
 ├── networks/network.py            # NetworkConfig, Network
 ├── trainer.py                     # Trainer, TrainerConfig
-├── utils1.py                      # 数据路径/常量（train_ids/test_ids/BATCH_SIZE/...）
-├── utils/evaluation.py            # Evaluator, denoise, metrics, accuracy  
+├── utils1.py                      # Data paths/constants (train_ids/test_ids/BATCH_SIZE/...)
+├── utils/evaluation.py            # Evaluator, denoise, metrics, accuracy
 ├── eval_patch_dataset.py          # EvalPatchDataset
-└── requirements.txt               # 依赖文件
+└── requirements.txt               # Dependency file
 ```
 
-```
-## 2. 创建环境
-
+## 2. Create Environment
 ```bash
-# ① 新建 & 激活环境
+# ① Create & activate environment
 conda create -n pkdiff python=3.10 -y
 conda activate pkdiff
-
-# ② 先装重依赖（带好二进制）
+# ② Install heavy dependencies (with binaries)
 conda install -c conda-forge rasterio affine -y
 ```
 
-## 3. 安装 requirements.txt 依赖
-
-在项目根目录执行：
-
+## 3. Install requirements.txt Dependencies
+Run the following command in the project root directory:
 ```bash
 pip install -r requirements.txt
 ```
 
-## 4. 开始训练
-
-### 单机多卡（以 4 卡为例）
-
+## 4. Start Training
+### Single Machine Multi-GPU (e.g., 4 GPUs)
 ```bash
 CUDA_VISIBLE_DEVICES=0,1,2,3 \
 torchrun --nproc_per_node=4 train.py
 ```
-
+```
