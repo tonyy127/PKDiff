@@ -7,7 +7,6 @@ Based on PyTorch DistributedDataParallel (DDP), this project provides scripts fo
 
 ## Project Structure
 ```
-```
 repo_root/
 ├── train.py                       # Training entry point
 ├── networks/network.py            # NetworkConfig, Network
