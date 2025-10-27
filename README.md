@@ -7,6 +7,7 @@ The code is currently being organized and supplemented.
 
 基于 PyTorch DistributedDataParallel (DDP) 的多卡训练与评测脚本，支持单机多卡/多机多卡、Linear Warmup → Cosine 学习率调度、按参数名分组学习率、分布式评测聚合以及 NVML 显卡信息打印。
 ```
+```
 repo_root/
 ├── train.py                       # 训练入口
 ├── networks/network.py            # NetworkConfig, Network
@@ -17,6 +18,7 @@ repo_root/
 └── requirements.txt               # 依赖文件
 ```
 
+```
 ## 2. 创建环境
 
 ```bash
