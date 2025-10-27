@@ -45,7 +45,7 @@ print(f"Device[{local_rank}]: {name}")
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 network_config = NetworkConfig(
-    n_timesteps=4,
+    n_timesteps=25,
     n_scales=3,
     max_patch_size=128,
     scale_procedure='loop',
