@@ -12,6 +12,11 @@ parameter-grouped learning rates, distributed evaluation aggregation, and NVML G
 ```
 ## Project Structure
 
+data_root/
+├── tmp                       
+    ├──Vaihingen
+    ├──Potsdam
+
 repo_root/
 ├── train.py                       # Training entry point
 ├── networks/network.py            # NetworkConfig, Network
