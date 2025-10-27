@@ -7,6 +7,7 @@ Based on PyTorch DistributedDataParallel (DDP), this project provides scripts fo
 
 ## Project Structure
 ```
+```
 repo_root/
 ├── train.py                       # Training entry point
 ├── networks/network.py            # NetworkConfig, Network
@@ -15,6 +16,7 @@ repo_root/
 ├── utils/evaluation.py            # Evaluator, denoise, metrics, accuracy
 ├── eval_patch_dataset.py          # EvalPatchDataset
 └── requirements.txt               # Dependency file
+```
 ```
 
 ## 2. Create Environment
