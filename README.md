@@ -5,7 +5,7 @@ The code is currently being organized and supplemented.
 # Multimodal Remote Sensing Segmentation (DDP) Training
 Based on PyTorch DistributedDataParallel (DDP), this project provides scripts for multi-GPU training and evaluation, supporting single-machine multi-GPU and multi-machine multi-GPU setups, Linear Warmup → Cosine learning rate scheduling, parameter-grouped learning rates, distributed evaluation aggregation, and NVML GPU information printing.
 ```
-
+```
 ## Project Structure
 
 repo_root/
