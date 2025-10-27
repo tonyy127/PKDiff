@@ -17,9 +17,9 @@ repo_root/
 ├── eval_patch_dataset.py          # EvalPatchDataset
 └── requirements.txt               # Dependency file
 ```
-```
 
-## 2. Create Environment
+
+## 1. Create Environment
 ```bash
 # ① Create & activate environment
 conda create -n pkdiff python=3.10 -y
@@ -28,13 +28,13 @@ conda activate pkdiff
 conda install -c conda-forge rasterio affine -y
 ```
 
-## 3. Install requirements.txt Dependencies
+## 2. Install requirements.txt Dependencies
 Run the following command in the project root directory:
 ```bash
 pip install -r requirements.txt
 ```
 
-## 4. Start Training
+## 3. Start Training
 ### Single Machine Multi-GPU (e.g., 4 GPUs)
 ```bash
 CUDA_VISIBLE_DEVICES=0,1,2,3 \
