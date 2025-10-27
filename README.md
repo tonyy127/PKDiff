@@ -23,7 +23,7 @@ repo_root/
 ├── trainer.py                     # Trainer, TrainerConfig
 
 ├── utils1.py                      # 数据路径/常量（train_ids/test_ids/BATCH_SIZE/...）
-├── utils/evaluation.py            # Evaluator, denoise, metrics, accuracy
+├── utils/evaluation.py            # Evaluator, denoise, metrics, accuracy  \n
 ├── eval_patch_dataset.py          # EvalPatchDataset
 └── requirements.txt               # 依赖文件
 ```
