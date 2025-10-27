@@ -17,8 +17,11 @@ The code is currently being organized and supplemented.
 ```
 repo_root/
 ├── train.py                       # 训练入口
+
 ├── networks/network.py            # NetworkConfig, Network
+
 ├── trainer.py                     # Trainer, TrainerConfig
+
 ├── utils1.py                      # 数据路径/常量（train_ids/test_ids/BATCH_SIZE/...）
 ├── utils/evaluation.py            # Evaluator, denoise, metrics, accuracy
 ├── eval_patch_dataset.py          # EvalPatchDataset
